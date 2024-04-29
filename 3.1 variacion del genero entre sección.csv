@@ -1,38 +1,39 @@
-﻿Contabilidad;Non-Conforming;76
-Contabilidad;Femenino;1234
-Contabilidad;Masculino;1437
-Desarrollo de negocios;Masculino;705
-Desarrollo de negocios;Non-Conforming;42
-Desarrollo de negocios;Femenino;620
-Entrenamiento;Masculino;722
-Entrenamiento;Femenino;641
-Entrenamiento;Non-Conforming;38
-Gestión de Productos;Non-Conforming;13
-Gestión de Productos;Masculino;281
-Gestión de Productos;Femenino;233
-Ingenieria;Femenino;2553
-Ingenieria;Masculino;2790
-Ingenieria;Non-Conforming;158
-Investigación y desarrollo;Non-Conforming;28
-Investigación y desarrollo;Femenino;422
-Investigación y desarrollo;Masculino;422
-Legal;Femenino;113
-Legal;Non-Conforming;7
-Legal;Masculino;128
-Marketing;Femenino;208
-Marketing;Masculino;209
-Marketing;Non-Conforming;5
-Recursos Humanos;Non-Conforming;38
-Recursos Humanos;Femenino;707
-Recursos Humanos;Masculino;753
-Revisión de cuentas;Femenino;20
-Revisión de cuentas;Masculino;20
-Servicios;Masculino;695
-Servicios;Non-Conforming;29
-Servicios;Femenino;669
-Soporte;Femenino;351
-Soporte;Masculino;393
-Soporte;Non-Conforming;28
-Ventas;Masculino;773
-Ventas;Non-Conforming;40
-Ventas;Femenino;684
+Sección,Genero,conteo
+Contabilidad,Non-Conforming,76
+Contabilidad,Femenino,1234
+Contabilidad,Masculino,1437
+Desarrollo de negocios,Masculino,705
+Desarrollo de negocios,Non-Conforming,42
+Desarrollo de negocios,Femenino,620
+Entrenamiento,Masculino,722
+Entrenamiento,Femenino,641
+Entrenamiento,Non-Conforming,38
+Gestión de Productos,Non-Conforming,13
+Gestión de Productos,Masculino,281
+Gestión de Productos,Femenino,233
+Ingenieria,Femenino,2553
+Ingenieria,Masculino,2790
+Ingenieria,Non-Conforming,158
+Investigación y desarrollo,Non-Conforming,28
+Investigación y desarrollo,Femenino,422
+Investigación y desarrollo,Masculino,422
+Legal,Femenino,113
+Legal,Non-Conforming,7
+Legal,Masculino,128
+Marketing,Femenino,208
+Marketing,Masculino,209
+Marketing,Non-Conforming,5
+Recursos Humanos,Non-Conforming,38
+Recursos Humanos,Femenino,707
+Recursos Humanos,Masculino,753
+Revisión de cuentas,Femenino,20
+Revisión de cuentas,Masculino,20
+Servicios,Masculino,695
+Servicios,Non-Conforming,29
+Servicios,Femenino,669
+Soporte,Femenino,351
+Soporte,Masculino,393
+Soporte,Non-Conforming,28
+Ventas,Masculino,773
+Ventas,Non-Conforming,40
+Ventas,Femenino,684
