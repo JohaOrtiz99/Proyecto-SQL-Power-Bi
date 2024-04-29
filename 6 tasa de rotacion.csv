@@ -1,7 +1,7 @@
 Seccion,Recuento_Total,conteo_terminado,tasa_facturacion
-"Revisión de cuentas",52,9,0,17
+Revisión_de_cuentas",52,9,0,17
 Legal,311,40,0,13
-Investigación y desarrollo,1084,130,0,12
+Investigación_y_desarrollo,1084,130,0,12
 Entrenamiento,1692,199,0,12
 Servicios,1686,184,0,11
 Ingenieria,6686,762,0,11
@@ -11,4 +11,4 @@ Contabilidad,3333,374,0,11
 Soporte,954,108,0,11
 Gestión de Productos,641,71,0,11
 Marketing,494,47,0,1
-Desarrollo de negocios,1642,158,0,1
+Desarrollo_negocios,1642,158,0,1
