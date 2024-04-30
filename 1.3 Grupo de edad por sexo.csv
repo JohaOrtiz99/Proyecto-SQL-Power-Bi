@@ -1,13 +1,13 @@
 GRUPO,GENERO,CONTEO
-22 a 30	Femenino	167
-22 a 30	Masculino	154
-22 a 30	Non-Conforming	10
-31 a 40	Femenino	2069
-31 a 40	Masculino	2266
-31 a 40	Non-Conforming	110
-41-50	Femenino	2315
-41-50	Masculino	2615
-41-50	Non-Conforming	150
-50+	Femenino	3904
-50+	Masculino	4293
-50+	Non-Conforming	232
+22 a 30,Femenino,167
+22 a 30,Masculino,154
+22 a 30,Non-Conforming,10
+31 a 40,Femenino,2069
+31 a 40,Masculino,2266
+31 a 40,Non-Conforming,110
+41-50,Femenino,2315
+41-50,Masculino,2615
+41-50,Non-Conforming,150
+50+,Femenino,3904
+50+,Masculino,4293
+50+,Non-Conforming,232
