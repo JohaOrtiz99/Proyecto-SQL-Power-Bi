@@ -17,6 +17,7 @@ Reporte de datos por medio de Power Bi.
 En un entorno corporativo, los resultados se pueden compartir en línea en www.powerbi.com
 
 ![powerbi-1](https://github.com/JohaOrtiz99/Proyecto-SQL-Power-Bi/blob/main/Diapositiva2.JPG)
+
 ![powerbi-1](https://github.com/JohaOrtiz99/Proyecto-SQL-Power-Bi/blob/main/Diapositiva3.JPG)
 
 
