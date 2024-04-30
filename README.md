@@ -20,6 +20,7 @@ En un entorno corporativo, los resultados se pueden compartir en línea en www.p
 
 ![powerbi-1](https://github.com/JohaOrtiz99/Proyecto-SQL-Power-Bi/blob/main/Diapositiva3.JPG)
 
+![format-termdate-1](https://github.com/JohaOrtiz99/Proyecto-SQL-Power-Bi/blob/main/Diapositiva3.JPG) 
 
 ## Análisis exploratorio de datos
 ### Preguntas:
