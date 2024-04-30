@@ -1,5 +1,5 @@
 /*
-Este proyecto profundiza en el ámbito del análisis de datos utilizando SQL y Power BI para descubrir importantes conocimientos 
+Este proyecto profundiza en el Ã¡mbito del anÃ¡lisis de datos utilizando SQL y Power BI para descubrir importantes conocimientos 
 sobre recursos humanos que pueden beneficiar enormemente a la empresa.
 Author: Johanna Ortiz
 */
@@ -18,7 +18,7 @@ FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = 'rh_data';
 
 
--- Se corrigió el formato de la columna "FECHA_TERMINACION"
+-- Se corrigiÃ³ el formato de la columna "FECHA_TERMINACION"
 --formato FECHA_TERMINACION ES fecha/hora valores UTC
 -- Actualizar fecha/hora hasta la fecha
 
@@ -29,7 +29,7 @@ UPDATE rh_data
 SET FECHA_TERMINACION = FORMAT(CONVERT(DATETIME, LEFT(FECHA_TERMINACION, 19), 120), 'yyyy-MM-dd');
 
 
--- Actualización de nvachar hasta la fecha
+-- ActualizaciÃ³n de nvachar hasta la fecha
 -- Primero, agregue una nueva columna de fecha
 ALTER TABLE rh_data
 ADD New_FechaT DATE;
@@ -69,15 +69,15 @@ FROM rh_data;
 
 -- PREGUNTAS A RESPONDER A PARTIR DE LOS DATOS
 
--- 1) ¿Cuál es la distribución por edades en la empresa?
+-- 1) Â¿CuÃ¡l es la distribuciÃ³n por edades en la empresa?
 
--- Distribución de edad
+-- DistribuciÃ³n de edad
 SELECT 
  MIN(edad) AS Joven, 
  MAX(edad) AS Antiguo
 FROM rh_data;
 
---Distribución del grupo de edad
+--DistribuciÃ³n del grupo de edad
 
 SELECT
   grupos_edad,
@@ -85,7 +85,7 @@ SELECT
 FROM (
   SELECT
     CASE
-      WHEN Edad <= 21 AND edad <= 30 THEN '21 a 30'
+      WHEN Edad <= 22 AND edad <= 30 THEN '22 a 30'
       WHEN edad <= 31 AND edad <= 40 THEN '31 a 40'
       WHEN edad <= 41 AND edad <= 50 THEN '41-50'
       ELSE '50+'
@@ -104,7 +104,7 @@ SELECT
 FROM (
   SELECT
     CASE
-      WHEN Edad <= 21 AND edad <= 30 THEN '21 a 30'
+      WHEN Edad <= 22 AND edad <= 30 THEN '22 a 30'
       WHEN edad <= 31 AND edad <= 40 THEN '31 a 40'
       WHEN edad <= 41 AND edad <= 50 THEN '41-50'
       ELSE '50+'
@@ -116,7 +116,7 @@ GROUP BY grupos_edad, genero
 ORDER BY grupos_edad, genero;
 
 
--- 2) ¿Cuál es el desglose por género en la empresa?
+-- 2) Â¿CuÃ¡l es el desglose por gÃ©nero en la empresa?
 
 SELECT
  Genero,
@@ -126,9 +126,9 @@ WHERE new_FechaT IS NULL
 GROUP BY Genero
 ORDER BY Genero ASC;
 
--- 3) ¿Cómo varía el género entre seccion y puestos de trabajo?
+-- 3) Â¿CÃ³mo varÃ­a el gÃ©nero entre seccion y puestos de trabajo?
 
--- sección
+-- secciÃ³n
 SELECT Seccion, Genero, count(*) as conteo
 FROM rh_data
 WHERE new_fechat IS NULL
@@ -146,7 +146,7 @@ GROUP BY Seccion, Puesto_trabajo,Genero
 ORDER BY Seccion, Puesto_trabajo,Genero ASC;
 
 
--- 4) ¿Cuál es la distribución racial en la empresa?
+-- 4) Â¿CuÃ¡l es la distribuciÃ³n racial en la empresa?
 SELECT raza,
  COUNT(*) AS conteo
 FROM rh_data
@@ -155,13 +155,13 @@ GROUP BY raza
 ORDER BY conteo DESC;
 
 
--- 5) ¿Cuál es la duración media del empleo en la empresa?
+-- 5) Â¿CuÃ¡l es la duraciÃ³n media del empleo en la empresa?
 SELECT
  AVG(DATEDIFF(year, fecha_contratacion, new_fechat)) AS Permanencia
  FROM rh_data
  WHERE new_fechat IS NOT NULL AND new_fechat <= GETDATE();
 
--- 6) ¿Qué departamento tiene la tasa de rotación más alta?
+-- 6) Â¿QuÃ© departamento tiene la tasa de rotaciÃ³n mÃ¡s alta?
 --obtener el recuento total
 ---obtener el conteo terminado
 -- recuento terminado/recuento total
@@ -186,7 +186,7 @@ ORDER BY tasa_facturacion DESC;
 
 
 
--- 7) ¿Cuál es la distribución de la permanencia para cada seccion?
+-- 7) Â¿CuÃ¡l es la distribuciÃ³n de la permanencia para cada seccion?
 --opcion 1
 SELECT Seccion,
     AVG(DATEDIFF(year, fecha_contratacion, new_fechat)) AS Permanencia
@@ -197,7 +197,7 @@ WHERE
 GROUP BY seccion;
 
 
--- 8)¿Cuántos empleados trabajan de forma remota para cada departamento?
+-- 8)Â¿CuÃ¡ntos empleados trabajan de forma remota para cada departamento?
 SELECT Lugar,
  count(*) AS Conteo
  FROM rh_data
@@ -205,7 +205,7 @@ SELECT Lugar,
  GROUP BY lugar;
 
 
--- 9)¿Cuál es la distribución de empleados en los diferentes estados?
+-- 9)Â¿CuÃ¡l es la distribuciÃ³n de empleados en los diferentes estados?
 SELECT Estado,
 count(*) AS Conteo
 FROM rh_data
@@ -214,7 +214,7 @@ GROUP BY estado
 ORDER BY conteo DESC;
 
 
--- 10) ¿Cómo se distribuyen los puestos de trabajo en la empresa?
+-- 10) Â¿CÃ³mo se distribuyen los puestos de trabajo en la empresa?
 SELECT Puesto_Trabajo,
  count(*) AS Cantidad
 FROM rh_data
@@ -224,34 +224,34 @@ ORDER BY cantidad DESC;
 
 
 
--- 11) ¿Cómo han variado los recuentos de contratación de empleados a lo largo del tiempo?
+-- 11) Â¿CÃ³mo han variado los recuentos de contrataciÃ³n de empleados a lo largo del tiempo?
 
 SELECT
-año_contr,Contratacion,Terminacion,
+aÃ±o_contr,Contratacion,Terminacion,
 (contratacion - terminacion) AS Cambio,
-(contratacion - terminacion)/contratacion AS porcentaje_cambio_contratación
+(contratacion - terminacion)/contratacion AS porcentaje_cambio_contrataciÃ³n
 FROM  
   (SELECT
-  YEAR(fecha_contratacion) AS Año_contr,
+  YEAR(fecha_contratacion) AS AÃ±o_contr,
   count(*) as contratacion,
   SUM(CASE WHEN new_fechat IS NOT NULL AND new_fechat <= GETDATE() THEN 1 ELSE 0 END) terminacion
   FROM rh_data
   GROUP BY year(fecha_contratacion)
   ) AS Subconsulta
-ORDER BY porcentaje_cambio_contratación ASC;
+ORDER BY porcentaje_cambio_contrataciÃ³n ASC;
 
 -- corrige valores cero de la consulta anterior
 
-SELECT año_contr,Contratacion,Terminacion,
+SELECT aÃ±o_contr,Contratacion,Terminacion,
     (contratacion - terminacion) AS Cambio,
-    (round(CAST(contratacion - terminacion AS FLOAT) / NULLIF(contratacion, 0), 2)) *100 AS Porcentaje_cambio_contratación
+    (round(CAST(contratacion - terminacion AS FLOAT) / NULLIF(contratacion, 0), 2)) *100 AS Porcentaje_cambio_contrataciÃ³n
 FROM  
     (SELECT
-        YEAR(fecha_contratacion) AS Año_contr,
+        YEAR(fecha_contratacion) AS AÃ±o_contr,
   count(*) as contratacion,
   SUM(CASE WHEN new_fechat IS NOT NULL AND new_fechat <= GETDATE() THEN 1 ELSE 0 END) terminacion
   FROM rh_data
   GROUP BY year(fecha_contratacion)
   ) AS Subconsulta
-ORDER BY porcentaje_cambio_contratación ASC;
+ORDER BY porcentaje_cambio_contrataciÃ³n ASC;
 
